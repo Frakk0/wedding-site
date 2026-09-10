@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "home": "Home",
+    "schedule": "Schedule & Location",
+    "rsvp": "RSVP",
+    "faq": "FAQ",
+    "gifts": "Gifts"
+  },
+  "home": {
+    "title": "We're getting married!",
+    "welcome": "We can't wait to celebrate with you."
+  },
+  "rsvp": {
+    "title": "RSVP",
+    "attending": "Will you be joining us?",
+    "yes": "Yes, happily!",
+    "no": "Unfortunately not",
+    "guestCount": "Number of guests",
+    "dietary": "Dietary requirements",
+    "message": "Message for us",
+    "submit": "Confirm RSVP"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "dressCodeQuestion": "What is the dress code?",
+    "kidsQuestion": "Can we bring children?"
+  }
+}

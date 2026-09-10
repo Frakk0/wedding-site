@@ -1,4 +1,12 @@
 import { supabaseClient } from './supabase.js'
+import {
+  initLanguage,
+  setLanguage,
+  t,
+  getLanguage,
+} from './i18n.js'
+
+await initLanguage()
 
 const params = new URLSearchParams(window.location.search)
 const inviteCode = params.get('code')
@@ -6,12 +14,27 @@ const inviteCode = params.get('code')
 const title = document.querySelector('#title')
 const subtitle = document.querySelector('#subtitle')
 const form = document.querySelector('#rsvp-form')
-const guestCount = document.querySelector('#guest-count')
 const status = document.querySelector('#status')
 const attendingSelect = document.querySelector('#attending')
 const guestCountInput = document.querySelector('#guest-count')
 const dietaryNotesInput = document.querySelector('#dietary-notes')
+const messageInput = document.querySelector('#message')
 const customMessage = document.querySelector('#custom-message')
+const languageSelector = document.querySelector('#language-selector')
+
+let invitationData = null
+
+// Make the selector reflect the currently active language
+if (languageSelector) {
+  languageSelector.value = getLanguage()
+
+  languageSelector.addEventListener('change', async (event) => {
+    await setLanguage(event.target.value)
+
+    // Re-render dynamic text in the newly selected language
+    renderInvitation()
+  })
+}
 
 function updateAttendanceFields() {
   const attending = attendingSelect.value === 'yes'
@@ -27,138 +50,182 @@ function updateAttendanceFields() {
   }
 }
 
-attendingSelect.addEventListener('change', updateAttendanceFields)
+attendingSelect.addEventListener(
+  'change',
+  updateAttendanceFields
+)
 
+function renderInvitation() {
+  if (!invitationData) {
+    return
+  }
+
+  title.textContent = t(
+    'rsvp.welcome',
+    { name: invitationData.display_name }
+  )
+
+  subtitle.textContent = t(
+    'rsvp.guestLimit',
+    { count: invitationData.max_guests }
+  )
+
+  if (invitationData.custom_message) {
+    customMessage.textContent =
+      invitationData.custom_message
+  } else {
+    customMessage.textContent =
+      t('rsvp.defaultCustomMessage')
+  }
+
+  customMessage.hidden = false
+
+  if (invitationData.rsvp) {
+    status.textContent =
+      t('rsvp.alreadyResponded')
+  }
+}
 
 async function loadInvitation() {
   if (!inviteCode) {
-    title.textContent = 'Invalid invitation'
-    subtitle.textContent = 'No invitation code was provided.'
+    title.textContent =
+      t('rsvp.invalidInvitation')
+
+    subtitle.textContent =
+      t('rsvp.missingCode')
+
     return
   }
-
-  const { data, error } = await supabaseClient.functions.invoke(
-    'get-invitation',
-    {
-      body: {
-        invite_code: inviteCode,
-      },
-    }
-  )
-
-  if (error) {
-    console.error(error)
-    title.textContent = 'Invitation not found'
-    subtitle.textContent = 'Please check your invitation link.'
-    return
-  }
-
-  if (data.custom_message) {
-    customMessage.textContent = data.custom_message
-    customMessage.hidden = false
-    } else {
-    customMessage.textContent = `Test default message`
-    customMessage.hidden = false
-    }
-
-
-  title.textContent = `Welcome, ${data.display_name}`
-  subtitle.textContent =
-    `Your invitation is for up to ${data.max_guests} guest${data.max_guests === 1 ? '' : 's'}.`
-
-  guestCount.max = data.max_guests
-  guestCount.value = Math.min(1, data.max_guests)
-
-  form.hidden = false
-
-  if (data.rsvp) {
-  document.querySelector('#attending').value =
-    data.rsvp.attending ? 'yes' : 'no'
-
-    updateAttendanceFields()
-
-  document.querySelector('#guest-count').value =
-    data.rsvp.guest_count
-
-  document.querySelector('#dietary-notes').value =
-    data.rsvp.dietary_notes ?? ''
-
-  document.querySelector('#message').value =
-    data.rsvp.message ?? ''
-
-  status.textContent =
-    'You have already responded. You can update your RSVP below.'
-}
-}
-
-loadInvitation()
-
-form.addEventListener('submit', async (event) => {
-  event.preventDefault()
-
-  status.textContent = 'Saving...'
-
-  const attendingValue =
-    document.querySelector('#attending').value
-
-  const attending =
-    attendingValue === 'yes'
-
-  const guestCountValue =
-    Number(document.querySelector('#guest-count').value)
-
-  const dietaryNotes =
-    document.querySelector('#dietary-notes').value.trim()
-
-  const message =
-    document.querySelector('#message').value.trim()
 
   const { data, error } =
     await supabaseClient.functions.invoke(
-      'submit-rsvp',
+      'get-invitation',
       {
         body: {
           invite_code: inviteCode,
-          attending,
-          guest_count: guestCountValue,
-          dietary_notes: dietaryNotes,
-          message,
         },
-      },
+      }
     )
 
   if (error) {
-    console.error('RSVP error:', error)
+    console.error(
+      'Invitation loading error:',
+      error
+    )
 
-    if (error.context) {
-      try {
-        const response =
-          await error.context.json()
+    title.textContent =
+      t('rsvp.notFound')
 
-        console.error(
-          'Function response:',
-          response,
-        )
-
-        status.textContent =
-          response.error || 'Could not save RSVP.'
-
-        return
-      } catch {
-        // ignore parsing error
-      }
-    }
-
-    status.textContent =
-      'Could not save RSVP.'
+    subtitle.textContent =
+      t('rsvp.checkLink')
 
     return
   }
 
-  console.log('RSVP saved:', data)
+  invitationData = data
 
-  status.textContent =
-    attending
-      ? 'Thank you! Your attendance has been confirmed.'
-      : 'Thank you. Your response has been saved.'
-})
+  guestCountInput.max =
+    data.max_guests
+
+  guestCountInput.value =
+    Math.min(1, data.max_guests)
+
+  if (data.rsvp) {
+    attendingSelect.value =
+      data.rsvp.attending ? 'yes' : 'no'
+
+    guestCountInput.value =
+      data.rsvp.guest_count
+
+    dietaryNotesInput.value =
+      data.rsvp.dietary_notes ?? ''
+
+    messageInput.value =
+      data.rsvp.message ?? ''
+  }
+
+  updateAttendanceFields()
+  renderInvitation()
+
+  form.hidden = false
+}
+
+form.addEventListener(
+  'submit',
+  async (event) => {
+    event.preventDefault()
+
+    status.textContent =
+      t('rsvp.saving')
+
+    const attending =
+      attendingSelect.value === 'yes'
+
+    const guestCount =
+      Number(guestCountInput.value)
+
+    const dietaryNotes =
+      dietaryNotesInput.value.trim()
+
+    const message =
+      messageInput.value.trim()
+
+    const { data, error } =
+      await supabaseClient.functions.invoke(
+        'submit-rsvp',
+        {
+          body: {
+            invite_code: inviteCode,
+            attending,
+            guest_count: guestCount,
+            dietary_notes: dietaryNotes,
+            message,
+          },
+        }
+      )
+
+    if (error) {
+      console.error(
+        'RSVP error:',
+        error
+      )
+
+      if (error.context) {
+        try {
+          const response =
+            await error.context.json()
+
+          console.error(
+            'Function response:',
+            response
+          )
+
+          status.textContent =
+            response.error ||
+            t('rsvp.savedError')
+
+          return
+        } catch {
+          // Could not parse error response
+        }
+      }
+
+      status.textContent =
+        t('rsvp.savedError')
+
+      return
+    }
+
+    console.log(
+      'RSVP saved:',
+      data
+    )
+
+    status.textContent =
+      attending
+        ? t('rsvp.savedYes')
+        : t('rsvp.savedNo')
+  }
+)
+
+loadInvitation()

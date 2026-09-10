@@ -3,40 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wedding RSVP</title>
+  <title data-i18n="rsvp.title">RSVP</title>
 </head>
+
 <body>
   <main>
-    <h1 id="title">Loading invitation...</h1>
+    <h1 id="title" data-i18n="rsvp.loading"></h1>
     <p id="subtitle"></p>
 
     <p id="custom-message" hidden></p>
 
     <form id="rsvp-form" hidden>
       <label>
-        Attending?
+        <span data-i18n="rsvp.attending"></span>
+
         <select id="attending">
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
+          <option value="yes" data-i18n="rsvp.yes"></option>
+          <option value="no" data-i18n="rsvp.no"></option>
         </select>
       </label>
 
       <label>
-        Number of guests
-        <input id="guest-count" type="number" min="0" value="1" />
+        <span data-i18n="rsvp.guestCount"></span>
+
+        <input
+          id="guest-count"
+          type="number"
+          min="0"
+          value="1"
+        />
       </label>
 
       <label>
-        Dietary notes
+        <span data-i18n="rsvp.dietary"></span>
+
         <textarea id="dietary-notes"></textarea>
       </label>
 
       <label>
-        Message
+        <span data-i18n="rsvp.message"></span>
+
         <textarea id="message"></textarea>
       </label>
 
-      <button type="submit">Confirm RSVP</button>
+      <button
+        type="submit"
+        data-i18n="rsvp.submit"
+      ></button>
     </form>
 
     <p id="status"></p>
@@ -45,3 +58,9 @@
   <script type="module" src="/js/rsvp.js"></script>
 </body>
 </html>
+
+<select id="language-selector">
+  <option value="en">English</option>
+  <option value="it">Italiano</option>
+  <option value="ru">Русский</option>
+</select>

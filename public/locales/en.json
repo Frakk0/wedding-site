@@ -1,0 +1,32 @@
+{
+  "common": {
+    "title": "Lisa & Franci",
+    "home": "Home",
+    "schedule": "Schedule & Location",
+    "rsvp": "RSVP",
+    "faq": "FAQ",
+    "gifts": "Gifts"
+  },
+  "rsvp": {
+    "title": "Wedding RSVP",
+    "welcome": "Welcome, {name}!",
+    "loading": "Loading invitation...",
+    "invalidInvitation": "Invalid invitation",
+    "missingCode": "No invitation code was provided.",
+    "notFound": "Invitation not found",
+    "checkLink": "Please check your invitation link.",
+    "guestLimit": "Your invitation is for up to {count} guests.",
+    "attending": "Will you be joining us?",
+    "yes": "Yes, happily!",
+    "no": "Unfortunately not",
+    "guestCount": "Number of guests",
+    "dietary": "Dietary requirements",
+    "message": "Message for us",
+    "submit": "Confirm RSVP",
+    "saving": "Saving...",
+    "savedYes": "Thank you! Your attendance has been confirmed.",
+    "savedNo": "Thank you. Your response has been saved.",
+    "alreadyResponded": "You have already responded. You can update your RSVP below.",
+    "defaultCustomMessage": "We can't wait to celebrate with you."
+  }
+}
