@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding RSVP</title>
+</head>
+<body>
+  <main>
+    <h1 id="title">Loading invitation...</h1>
+    <p id="subtitle"></p>
+
+    <p id="custom-message" hidden></p>
+
+    <form id="rsvp-form" hidden>
+      <label>
+        Attending?
+        <select id="attending">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </label>
+
+      <label>
+        Number of guests
+        <input id="guest-count" type="number" min="0" value="1" />
+      </label>
+
+      <label>
+        Dietary notes
+        <textarea id="dietary-notes"></textarea>
+      </label>
+
+      <label>
+        Message
+        <textarea id="message"></textarea>
+      </label>
+
+      <button type="submit">Confirm RSVP</button>
+    </form>
+
+    <p id="status"></p>
+  </main>
+
+  <script type="module" src="/js/rsvp.js"></script>
+</body>
+</html>
