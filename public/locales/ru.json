@@ -5,7 +5,9 @@
     "schedule": "Schedule & Location",
     "rsvp": "RSVP",
     "faq": "FAQ",
-    "gifts": "Gifts"
+    "gifts": "Gifts",
+    "saveTheDateLabel": "Сохраните дату",
+    "saveTheDateValue": "16.07.27"
   },
   "rsvp": {
     "title": "RSVP",
@@ -40,5 +42,16 @@
     "accommodationReply": "Мы забронировали номера в отеле Lido Seegarten — пожалуйста, укажите это на странице RSVP этого сайта и обновите свой ответ соответственно.",
     "parkingQuestion": "Есть ли парковка?",
     "parkingReply": "Да, парковка есть у отеля Lido Seegarten и у церкви. Пожалуйста, следуйте указателям парковки по прибытии."
+  },
+  "countdown": {
+    "days": "Дней",
+    "hours": "Часов",
+    "minutes": "Минут",
+    "seconds": "Секунд"
+  },
+  "gifts": {
+    "donateHint": "Попробуйте нажать на кнопку 5 раз, чтобы увидеть наши банковские реквизиты!",
+    "donateButton": "Сделать подарок",
+    "bankInfoIntro": "Спасибо, что подумали о нас! Вот наши банковские реквизиты:"
   }
 }

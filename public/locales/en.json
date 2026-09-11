@@ -5,7 +5,9 @@
     "schedule": "Schedule & Location",
     "rsvp": "RSVP",
     "faq": "FAQ",
-    "gifts": "Gifts"
+    "gifts": "Gifts",
+    "saveTheDateLabel": "Save the date",
+    "saveTheDateValue": "16.07.27"
   },
   "rsvp": {
     "title": "Wedding RSVP",
@@ -54,5 +56,16 @@
     "parkingQuestion": "Is there parking available?",
     "parkingReply": "Yes, there is parking available at the Hotel Lido Seegarten and at the church. Please follow the signs for parking when you arrive."
 
+  },
+  "countdown": {
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds"
+  },
+  "gifts": {
+    "donateHint": " ",
+    "donateButton": "Send a gift",
+    "bankInfoIntro": "Thank you for thinking of us! Here are our bank details:"
   }
 }

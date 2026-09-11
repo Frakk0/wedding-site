@@ -5,7 +5,9 @@
     "schedule": "Programma e Luogo",
     "rsvp": "Riservazione",
     "faq": "Domande Frequenti",
-    "gifts": "Regali"
+    "gifts": "Regali",
+    "saveTheDateLabel": "Segna la data",
+    "saveTheDateValue": "16.07.27"
   },
   "rsvp": {
     "title": "Riservazione",
@@ -40,5 +42,16 @@
     "accommodationReply": "Abbiamo riservato un blocco di camere all'Hotel Lido Seegarten: vi preghiamo di indicare la vostra necessità nella pagina RSVP di questo sito e di aggiornare la vostra RSVP di conseguenza.",
     "parkingQuestion": "C'è un parcheggio disponibile?",
     "parkingReply": "Sì, è disponibile un parcheggio presso l'Hotel Lido Seegarten e presso la chiesa. Vi preghiamo di seguire le indicazioni per il parcheggio al vostro arrivo."
+  },
+  "countdown": {
+    "days": "Giorni",
+    "hours": "Ore",
+    "minutes": "Minuti",
+    "seconds": "Secondi"
+  },
+  "gifts": {
+    "donateHint": "Prova a cliccare il pulsante 5 volte per vedere i nostri dati bancari!",
+    "donateButton": "Fai un regalo",
+    "bankInfoIntro": "Grazie per aver pensato a noi! Ecco i nostri dati bancari:"
   }
 }

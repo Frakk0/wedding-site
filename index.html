@@ -31,7 +31,32 @@
     <section id="home">
       <h1 data-i18n="common.title"></h1>
 
-      <img class="photo" src="images/HeroPic.jpeg" alt="Lisa & Franci">
+      <div id="countdown" class="countdown">
+        <div class="countdown-unit">
+          <span class="countdown-value" id="countdown-days">--</span>
+          <span class="countdown-label" data-i18n="countdown.days"></span>
+        </div>
+        <div class="countdown-unit">
+          <span class="countdown-value" id="countdown-hours">--</span>
+          <span class="countdown-label" data-i18n="countdown.hours"></span>
+        </div>
+        <div class="countdown-unit">
+          <span class="countdown-value" id="countdown-minutes">--</span>
+          <span class="countdown-label" data-i18n="countdown.minutes"></span>
+        </div>
+        <div class="countdown-unit">
+          <span class="countdown-value" id="countdown-seconds">--</span>
+          <span class="countdown-label" data-i18n="countdown.seconds"></span>
+        </div>
+      </div>
+
+      <div class="hero-wrap">
+        <img class="photo" src="images/HeroPic.jpeg" alt="Lisa & Franci">
+        <div class="hero-caption">
+          <p data-i18n="common.saveTheDateLabel"></p>
+          <p data-i18n="common.saveTheDateValue"></p>
+        </div>
+      </div>
     </section>
 
     <section id="schedule"></section>
