@@ -40,7 +40,8 @@
     "photos": "Photo Session",
     "aperitif": "Aperitif",
     "dinner": "Dinner",
-    "party": "Party"
+    "party": "Party",
+    "routeTitle": "Route from the hotel to the church"
   },
   "faq": {
     "title": "Frequently Asked Questions",

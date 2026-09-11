@@ -41,6 +41,12 @@ h2 {
   font-size: 2.5rem;
 }
 
+main section h1,
+main section h2,
+main section h3 {
+  text-align: center;
+}
+
 a {
   color: var(--color-primary);
 }
@@ -48,6 +54,7 @@ a {
 header {
   position: sticky;
   top: 0;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,6 +70,11 @@ nav a {
 }
 
 nav a:hover {
+  color: var(--color-primary);
+}
+
+nav a.active {
+  font-weight: bold;
   color: var(--color-primary);
 }
 
@@ -161,6 +173,16 @@ button:hover {
   display: block;
   color: var(--color-muted);
   font-size: 0.9rem;
+}
+
+.route-map {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: 400px;
+  margin: 1.5rem auto;
+  border: 1px solid var(--color-accent);
+  border-radius: 8px;
 }
 
 /* Drop an <img> in place of a placeholder once you have real photos */

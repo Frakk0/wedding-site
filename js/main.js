@@ -20,3 +20,27 @@ document
   .addEventListener('change', event => {
     setLanguage(event.target.value)
   })
+
+const navLinks = document.querySelectorAll('nav a[href^="#"]')
+
+const sectionObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        return
+      }
+
+      navLinks.forEach(link => {
+        link.classList.toggle(
+          'active',
+          link.getAttribute('href') === `#${entry.target.id}`
+        )
+      })
+    })
+  },
+  { rootMargin: '-50% 0px -50% 0px' }
+)
+
+document
+  .querySelectorAll('main section[id]')
+  .forEach(section => sectionObserver.observe(section))
