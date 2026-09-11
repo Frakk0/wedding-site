@@ -9,10 +9,12 @@ import {
 await initLanguage()
 
 const params = new URLSearchParams(window.location.search)
-const inviteCode = params.get('code')
+let inviteCode = params.get('code')
 
 const title = document.querySelector('#title')
 const subtitle = document.querySelector('#subtitle')
+const codeForm = document.querySelector('#code-form')
+const codeInput = document.querySelector('#code-input')
 const form = document.querySelector('#rsvp-form')
 const status = document.querySelector('#status')
 const attendingSelect = document.querySelector('#attending')
@@ -94,6 +96,8 @@ async function loadInvitation() {
     subtitle.textContent =
       t('rsvp.missingCode')
 
+    codeForm.hidden = false
+
     return
   }
 
@@ -119,8 +123,12 @@ async function loadInvitation() {
     subtitle.textContent =
       t('rsvp.checkLink')
 
+    codeForm.hidden = false
+
     return
   }
+
+  codeForm.hidden = true
 
   invitationData = data
 
@@ -149,6 +157,32 @@ async function loadInvitation() {
 
   form.hidden = false
 }
+
+codeForm.addEventListener(
+  'submit',
+  async (event) => {
+    event.preventDefault()
+
+    const enteredCode = codeInput.value.trim()
+
+    if (!enteredCode) {
+      return
+    }
+
+    inviteCode = enteredCode
+
+    const url = new URL(window.location)
+    url.searchParams.set('code', inviteCode)
+    window.history.replaceState({}, '', url)
+
+    title.textContent =
+      t('rsvp.loading')
+
+    subtitle.textContent = ''
+
+    await loadInvitation()
+  }
+)
 
 form.addEventListener(
   'submit',

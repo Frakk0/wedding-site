@@ -1,28 +1,37 @@
 {
-  "nav": {
+  "common": {
+    "title": "Lisa & Franci",
     "home": "Home",
-    "schedule": "Schedule & Location",
-    "rsvp": "RSVP",
-    "faq": "FAQ",
-    "gifts": "Gifts"
-  },
-  "home": {
-    "title": "We're getting married!",
-    "welcome": "We can't wait to celebrate with you."
+    "schedule": "Programma e Luogo",
+    "rsvp": "Riservazione",
+    "faq": "Domande Frequenti",
+    "gifts": "Regali"
   },
   "rsvp": {
-    "title": "RSVP",
-    "attending": "Will you be joining us?",
-    "yes": "Yes, happily!",
-    "no": "Unfortunately not",
-    "guestCount": "Number of guests",
-    "dietary": "Dietary requirements",
-    "message": "Message for us",
-    "submit": "Confirm RSVP"
+    "title": "Riservazione",
+    "enterCode": "Inserisci il tuo codice di invito",
+    "submitCode": "Visualizza invito",
+    "backToSite": "Torna al sito",
+    "attending": "Potrai partecipare?",
+    "yes": "Sì!",
+    "no": "Sfortunatamente no",
+    "guestCount": "Numero di ospiti",
+    "dietary": "Requisiti dietetici",
+    "message": "Messaggio per noi",
+    "submit": "Conferma RSVP"
+  },
+  "schedule": {
+    "title": "Programma e Luogo",
+    "ceremony": "Cerimonia",
+    "reception": "Rinfresco",
+    "photos": "Gli sposi scappano a far foto",
+    "aperitif": "Aperitivo, Intrattenimento",
+    "dinner": "Cena",
+    "party": "PartyRock"
   },
   "faq": {
-    "title": "Frequently Asked Questions",
-    "dressCodeQuestion": "What is the dress code?",
-    "kidsQuestion": "Can we bring children?"
+    "title": "Domande Frequenti",
+    "dressCodeQuestion": "C'é un 'dresscode'?",
+    "kidsQuestion": "Possiamo portare i bambini?"
   }
 }

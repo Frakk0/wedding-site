@@ -15,6 +15,9 @@
     "missingCode": "No invitation code was provided.",
     "notFound": "Invitation not found",
     "checkLink": "Please check your invitation link.",
+    "enterCode": "Enter your invitation code",
+    "submitCode": "View invitation",
+    "backToSite": "Back to main site",
     "guestLimit": "Your invitation is for up to {count} guests.",
     "attending": "Will you be joining us?",
     "yes": "Yes, happily!",
@@ -27,6 +30,26 @@
     "savedYes": "Thank you! Your attendance has been confirmed.",
     "savedNo": "Thank you. Your response has been saved.",
     "alreadyResponded": "You have already responded. You can update your RSVP below.",
-    "defaultCustomMessage": "We can't wait to celebrate with you."
+    "defaultCustomMessage": "We can't wait to celebrate with you.",
+    "savedError": "Something went wrong saving your RSVP. Please try again."
+  },
+  "schedule": {
+    "title": "Schedule & Location",
+    "ceremony": "Ceremony",
+    "reception": "Reception",
+    "photos": "Photo Session",
+    "aperitif": "Aperitif",
+    "dinner": "Dinner",
+    "party": "Party"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "dressCodeQuestion": "Is there a dress code?",
+    "dressCodeReply": "Yes, we kindly ask guests to dress in formal attire. For ladies please don't wear white or red, and for gentlemen please wear a suit or jacket.",
+    "kidsQuestion": "Can we bring children?",
+    "kidsReply": "We love your little ones, but we kindly ask that you leave them at home for the wedding.",
+    "accommodationQuestion": "Is there accommodation available?",
+    "accommodationReply": "We have reserved a block of rooms at the Hotel Lido Seegarten, please mention your need in the rsvp page of this website and update your rsvp accordingly. "
+
   }
 }

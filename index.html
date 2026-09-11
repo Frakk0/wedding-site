@@ -3,19 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>"common.title"</title>
+  <title data-i18n="common.title">Lisa & Franci</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 
-  <h1>Wedding website</h1>
+  <header>
+    <nav>
+      <a href="#home" data-i18n="common.home"></a>
+      <a href="#schedule" data-i18n="common.schedule"></a>
+      <a href="#faq" data-i18n="common.faq"></a>
+      <a href="#gifts" data-i18n="common.gifts"></a>
+      <a href="rsvp.html" data-i18n="common.rsvp"></a>
+    </nav>
+
+    <select id="language-selector">
+      <option value="en">English</option>
+      <option value="it">Italiano</option>
+      <option value="ru">Русский</option>
+    </select>
+  </header>
+
+  <main>
+    <section id="home">
+      <h1 data-i18n="common.title"></h1>
+
+      <div class="image-placeholder">Add a hero photo here</div>
+    </section>
+
+    <section id="schedule"></section>
+
+    <section id="faq"></section>
+
+    <section id="gifts"></section>
+  </main>
 
   <script type="module" src="/js/main.js"></script>
-
-  <select id="language-selector">
-  <option value="en">English</option>
-  <option value="it">Italiano</option>
-  <option value="ru">Русский</option>
-</select>
-
 </body>
 </html>

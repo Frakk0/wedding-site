@@ -1,17 +1,17 @@
 {
-  "nav": {
+  "common": {
+    "title": "Lisa & Franci",
     "home": "Home",
     "schedule": "Schedule & Location",
     "rsvp": "RSVP",
     "faq": "FAQ",
     "gifts": "Gifts"
   },
-  "home": {
-    "title": "We're getting married!",
-    "welcome": "We can't wait to celebrate with you."
-  },
   "rsvp": {
     "title": "RSVP",
+    "enterCode": "Введите код приглашения",
+    "submitCode": "Посмотреть приглашение",
+    "backToSite": "Вернуться на сайт",
     "attending": "Will you be joining us?",
     "yes": "Yes, happily!",
     "no": "Unfortunately not",
@@ -19,6 +19,15 @@
     "dietary": "Dietary requirements",
     "message": "Message for us",
     "submit": "Confirm RSVP"
+  },
+  "schedule": {
+    "title": "Программа и место",
+    "ceremony": "Церемония",
+    "reception": "Фуршет",
+    "photos": "Молодожёны уходят на фотосессию",
+    "aperitif": "Аперитив и развлечения",
+    "dinner": "Ужин",
+    "party": "Вечеринка"
   },
   "faq": {
     "title": "Frequently Asked Questions",

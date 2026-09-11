@@ -1,0 +1,182 @@
+/* ---------------------------------------------------
+   Theme: edit these variables to restyle the whole site
+   --------------------------------------------------- */
+:root {
+  --color-background: #fbf7f2;
+  --color-surface: #f3eae1;
+  --color-text: #3b3530;
+  --color-muted: #8a8078;
+  --color-heading: #7b4b3a;
+  --color-primary: #a9746e;
+  --color-primary-contrast: #ffffff;
+  --color-accent: #c9a66b;
+
+  --font-heading: 'Dancing Script', cursive;
+  --font-body: system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--color-background);
+  border-bottom: 1px solid var(--color-accent);
+}
+
+nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+nav a:hover {
+  color: var(--color-primary);
+}
+
+section {
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+input,
+select,
+textarea {
+  font-family: var(--font-body);
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  padding: 0.5rem;
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+button {
+  font-family: var(--font-body);
+  background: var(--color-primary);
+  color: var(--color-primary-contrast);
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.timeline {
+  list-style: none;
+  margin: 2rem auto;
+  padding: 0;
+  max-width: 480px;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: var(--color-accent);
+}
+
+.timeline li {
+  position: relative;
+  padding: 0 0 1.75rem 2.25rem;
+}
+
+.timeline li:last-child {
+  padding-bottom: 0;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  border: 2px solid var(--color-background);
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+.timeline-time {
+  display: block;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.timeline-title {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--color-heading);
+}
+
+.timeline-location {
+  display: block;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+/* Drop an <img> in place of a placeholder once you have real photos */
+.image-placeholder {
+  aspect-ratio: 4 / 3;
+  max-width: 480px;
+  margin: 1.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--color-accent);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem;
+}
