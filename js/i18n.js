@@ -30,11 +30,12 @@ export async function setLanguage(language) {
     language = 'en'
   }
 
-  const response = await fetch(`/locales/${language}.json`)
+  const localesUrl = `${import.meta.env.BASE_URL}locales/${language}.json`
+  const response = await fetch(localesUrl)
 
   if (!response.ok) {
     throw new Error(
-      `Could not load /locales/${language}.json (${response.status})`
+      `Could not load ${localesUrl} (${response.status})`
     )
   }
 
