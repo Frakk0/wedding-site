@@ -50,7 +50,9 @@
     "kidsQuestion": "Can we bring children?",
     "kidsReply": "We love your little ones, but we kindly ask that you leave them at home for the wedding.",
     "accommodationQuestion": "Is there accommodation available?",
-    "accommodationReply": "We have reserved a block of rooms at the Hotel Lido Seegarten, please mention your need in the rsvp page of this website and update your rsvp accordingly. "
+    "accommodationReply": "We have reserved a block of rooms at the Hotel Lido Seegarten, please mention your need in the rsvp page of this website and update your rsvp accordingly.",
+    "parkingQuestion": "Is there parking available?",
+    "parkingReply": "Yes, there is parking available at the Hotel Lido Seegarten and at the church. Please follow the signs for parking when you arrive."
 
   }
 }

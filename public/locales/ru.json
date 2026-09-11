@@ -31,8 +31,14 @@
     "routeTitle": "Маршрут от отеля до церкви"
   },
   "faq": {
-    "title": "Frequently Asked Questions",
-    "dressCodeQuestion": "What is the dress code?",
-    "kidsQuestion": "Can we bring children?"
+    "title": "Часто задаваемые вопросы",
+    "dressCodeQuestion": "Какой дресс-код?",
+    "dressCodeReply": "Да, мы просим гостей одеться нарядно. Дамам просьба не надевать белое или красное, а мужчинам — костюм или пиджак.",
+    "kidsQuestion": "Можно ли привести детей?",
+    "kidsReply": "Мы очень любим ваших малышей, но просим оставить их дома на время свадьбы.",
+    "accommodationQuestion": "Есть ли варианты проживания?",
+    "accommodationReply": "Мы забронировали номера в отеле Lido Seegarten — пожалуйста, укажите это на странице RSVP этого сайта и обновите свой ответ соответственно.",
+    "parkingQuestion": "Есть ли парковка?",
+    "parkingReply": "Да, парковка есть у отеля Lido Seegarten и у церкви. Пожалуйста, следуйте указателям парковки по прибытии."
   }
 }

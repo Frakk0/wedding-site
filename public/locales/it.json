@@ -33,6 +33,12 @@
   "faq": {
     "title": "Domande Frequenti",
     "dressCodeQuestion": "C'é un 'dresscode'?",
-    "kidsQuestion": "Possiamo portare i bambini?"
+    "dressCodeReply": "Sì, chiediamo gentilmente agli ospiti di vestire in abito formale. Per le signore vi preghiamo di non indossare bianco o rosso, per i signori un abito o una giacca.",
+    "kidsQuestion": "Possiamo portare i bambini?",
+    "kidsReply": "Adoriamo i vostri bambini, ma vi chiediamo gentilmente di lasciarli a casa per il matrimonio.",
+    "accommodationQuestion": "C'è disponibilità di alloggio?",
+    "accommodationReply": "Abbiamo riservato un blocco di camere all'Hotel Lido Seegarten: vi preghiamo di indicare la vostra necessità nella pagina RSVP di questo sito e di aggiornare la vostra RSVP di conseguenza.",
+    "parkingQuestion": "C'è un parcheggio disponibile?",
+    "parkingReply": "Sì, è disponibile un parcheggio presso l'Hotel Lido Seegarten e presso la chiesa. Vi preghiamo di seguire le indicazioni per il parcheggio al vostro arrivo."
   }
 }
