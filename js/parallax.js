@@ -1,6 +1,6 @@
 export function initSideBanner() {
   const banner = document.createElement('img')
-  banner.src = `${import.meta.env.BASE_URL}images/SideBanner.png`
+  banner.src = `${import.meta.env.BASE_URL}images/SideBanner_large.png`
   banner.alt = ''
   banner.className = 'side-banner'
   banner.setAttribute('aria-hidden', 'true')
