@@ -18,7 +18,7 @@ export function initSideBanner() {
   let ticking = false
 
   function updateParallax() {
-    banner.style.transform = `translateY(${window.scrollY * -0.5}px)`
+    banner.style.transform = `translateY(${window.scrollY * (-1 / 3)}px)`
     ticking = false
   }
 

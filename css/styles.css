@@ -208,6 +208,7 @@ button:hover {
   position: relative;
   max-width: 520px;
   margin: 1.5rem auto;
+  container-type: inline-size;
 }
 
 .hero-wrap .photo {
@@ -227,25 +228,15 @@ button:hover {
 }
 
 .hero-wrap .heart-photo {
-  max-width: 780px;
+  max-width: 702px;
   margin: 0 auto;
   border: none;
   border-radius: 0;
 }
 
-.hero-title-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  max-width: none;
-  margin: 0;
-}
-
 .hero-caption {
   position: absolute;
-  top: 6.25%;
+  top: 14.2857%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -259,7 +250,7 @@ button:hover {
 
 .hero-caption p {
   margin: 0;
-  font-size: 2.75rem;
+  font-size: 8.5cqw;
 }
 
 .save-the-date {
