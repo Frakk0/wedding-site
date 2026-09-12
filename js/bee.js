@@ -1,15 +1,29 @@
 const APPEAR_DELAY_MS = 5000
 
 export function initBee() {
+  const wrap = document.createElement('div')
+  wrap.className = 'bee-wrap'
+  wrap.style.visibility = 'hidden'
+
   const bee = document.createElement('img')
   bee.src = `${import.meta.env.BASE_URL}images/Bee.png`
   bee.alt = ''
   bee.className = 'bee'
   bee.setAttribute('aria-hidden', 'true')
-  bee.style.visibility = 'hidden'
-  document.body.appendChild(bee)
+
+  const buzz = document.createElement('div')
+  buzz.className = 'bee-buzz'
+  buzz.textContent = 'bzz bzz'
+  buzz.setAttribute('aria-hidden', 'true')
+
+  wrap.appendChild(bee)
+  wrap.appendChild(buzz)
+  document.body.appendChild(wrap)
 
   const margin = 40
+  let current
+  let flightTimeout
+  let buzzTimeout
 
   function randomPoint() {
     return {
@@ -18,25 +32,38 @@ export function initBee() {
     }
   }
 
-  let current
-
   function flyToRandomPoint() {
     const next = randomPoint()
     const distance = Math.hypot(next.x - current.x, next.y - current.y)
     const duration = Math.min(Math.max(distance / 80, 1.5), 4)
 
-    bee.style.transitionDuration = `${duration}s`
+    wrap.style.transitionDuration = `${duration}s`
     bee.style.setProperty('--bee-dir', next.x >= current.x ? 1 : -1)
-    bee.style.left = `${next.x}px`
-    bee.style.top = `${next.y}px`
+    wrap.style.left = `${next.x}px`
+    wrap.style.top = `${next.y}px`
 
     current = next
 
-    setTimeout(
+    flightTimeout = setTimeout(
       flyToRandomPoint,
       duration * 1000 + 800 + Math.random() * 1200
     )
   }
+
+  function showBuzz() {
+    buzz.classList.add('visible')
+
+    clearTimeout(buzzTimeout)
+    buzzTimeout = setTimeout(() => {
+      buzz.classList.remove('visible')
+    }, 1200)
+  }
+
+  bee.addEventListener('click', () => {
+    showBuzz()
+    clearTimeout(flightTimeout)
+    flyToRandomPoint()
+  })
 
   setTimeout(() => {
     // Start just off-screen on the right, then fly in to a random point.
@@ -45,11 +72,11 @@ export function initBee() {
       y: margin + Math.random() * (window.innerHeight - margin * 2),
     }
 
-    bee.style.transitionDuration = '0s'
-    bee.style.left = `${current.x}px`
-    bee.style.top = `${current.y}px`
+    wrap.style.transitionDuration = '0s'
+    wrap.style.left = `${current.x}px`
+    wrap.style.top = `${current.y}px`
     bee.style.setProperty('--bee-dir', -1)
-    bee.style.visibility = 'visible'
+    wrap.style.visibility = 'visible'
 
     // Wait a frame so the off-screen starting position is painted
     // before animating in, otherwise the browser skips straight to it.
