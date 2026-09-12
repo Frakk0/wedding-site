@@ -13,8 +13,24 @@ await initLanguage()
 initBee()
 initSideBanner()
 
+const STORAGE_KEY = 'rsvp-invite-code'
+
 const params = new URLSearchParams(window.location.search)
 let inviteCode = params.get('code')
+
+if (!inviteCode) {
+  const storedCode = localStorage.getItem(STORAGE_KEY)
+
+  /*
+  if (storedCode) {
+    inviteCode = storedCode
+
+    const url = new URL(window.location)
+    url.searchParams.set('code', inviteCode)
+    window.history.replaceState({}, '', url)
+  }
+  */
+}
 
 const title = document.querySelector('#title')
 const subtitle = document.querySelector('#subtitle')
@@ -96,7 +112,7 @@ function renderInvitation() {
 async function loadInvitation() {
   if (!inviteCode) {
     title.textContent =
-      t('rsvp.invalidInvitation')
+      t('rsvp.invitationSearch')
 
     subtitle.textContent =
       t('rsvp.missingCode')
@@ -134,6 +150,8 @@ async function loadInvitation() {
   }
 
   codeForm.hidden = true
+
+  //localStorage.setItem(STORAGE_KEY, inviteCode)
 
   invitationData = data
 

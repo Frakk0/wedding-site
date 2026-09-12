@@ -14,6 +14,11 @@
   <header>
     <a href="index.html" data-i18n="rsvp.backToSite"></a>
 
+    <p class="save-the-date">
+      <span data-i18n="common.saveTheDateLabel"></span>
+      <span data-i18n="common.saveTheDateValue"></span>
+    </p>
+
     <select id="language-selector">
       <option value="en">English</option>
       <option value="it">Italiano</option>
@@ -22,69 +27,67 @@
   </header>
 
   <main class="rsvp-main">
-    <p class="save-the-date">
-      <span data-i18n="common.saveTheDateLabel"></span>
-      <span data-i18n="common.saveTheDateValue"></span>
-    </p>
-
     <h1 id="title" data-i18n="rsvp.loading"></h1>
-    <p id="subtitle"></p>
 
-    <form id="code-form" hidden>
-      <label>
-        <span data-i18n="rsvp.enterCode"></span>
+    <div class="rsvp-content">
+      <p id="subtitle"></p>
 
-        <input id="code-input" type="text" />
-      </label>
+      <form id="code-form" hidden>
+        <label>
+          <span data-i18n="rsvp.enterCode"></span>
 
-      <button
-        type="submit"
-        data-i18n="rsvp.submitCode"
-      ></button>
-    </form>
+          <input id="code-input" type="text" maxlength="200" />
+        </label>
 
-    <p id="custom-message" hidden></p>
+        <button
+          type="submit"
+          data-i18n="rsvp.submitCode"
+        ></button>
+      </form>
 
-    <form id="rsvp-form" hidden>
-      <label>
-        <span data-i18n="rsvp.attending"></span>
+      <p id="custom-message" hidden></p>
 
-        <select id="attending">
-          <option value="yes" data-i18n="rsvp.yes"></option>
-          <option value="no" data-i18n="rsvp.no"></option>
-        </select>
-      </label>
+      <form id="rsvp-form" hidden>
+        <label>
+          <span data-i18n="rsvp.attending"></span>
 
-      <label>
-        <span data-i18n="rsvp.guestCount"></span>
+          <select id="attending">
+            <option value="yes" data-i18n="rsvp.yes"></option>
+            <option value="no" data-i18n="rsvp.no"></option>
+          </select>
+        </label>
 
-        <input
-          id="guest-count"
-          type="number"
-          min="0"
-          value="1"
-        />
-      </label>
+        <label>
+          <span data-i18n="rsvp.guestCount"></span>
 
-      <label>
-        <span data-i18n="rsvp.dietary"></span>
+          <input
+            id="guest-count"
+            type="number"
+            min="0"
+            value="1"
+          />
+        </label>
 
-        <textarea id="dietary-notes"></textarea>
-      </label>
+        <label>
+          <span data-i18n="rsvp.dietary"></span>
 
-      <label>
-        <span data-i18n="rsvp.message"></span>
+          <textarea id="dietary-notes" maxlength="200"></textarea>
+        </label>
 
-        <textarea id="message"></textarea>
-      </label>
+        <label>
+          <span data-i18n="rsvp.message"></span>
 
-      <p id="status"></p>
+          <textarea id="message" maxlength="200"></textarea>
+        </label>
 
-      <button
-        type="submit"
-        data-i18n="rsvp.submit"
-      ></button>
-    </form>
+        <p id="status"></p>
+
+        <button
+          type="submit"
+          data-i18n="rsvp.submit"
+        ></button>
+      </form>
+    </div>
   </main>
 
   <script type="module" src="/js/rsvp.js"></script>

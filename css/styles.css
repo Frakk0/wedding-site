@@ -262,23 +262,54 @@ button:hover {
 
 .rsvp-main {
   max-width: 480px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 5rem auto 0;
+  padding: 0 2rem 2rem;
   box-sizing: border-box;
   text-align: left;
+}
+
+#title {
+  margin-bottom: 0.5rem;
+}
+
+.rsvp-content {
+  padding: 2rem;
+  margin-top: 0.5rem;
+  background: rgba(42, 51, 40, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 8px;
 }
 
 .save-the-date {
   text-align: center;
   color: var(--color-heading);
   font-family: var(--font-heading);
-  font-size: 1.6rem;
+  font-size: 2.6rem;
   line-height: 1.3;
   margin: 1rem 0;
 }
 
 .save-the-date span {
   display: block;
+}
+
+header .save-the-date {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.1rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+header .save-the-date span {
+  display: inline;
+}
+
+header .save-the-date span:first-child::after {
+  content: ' - ';
 }
 
 .photo-split {

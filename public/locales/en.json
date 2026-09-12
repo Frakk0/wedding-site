@@ -14,7 +14,7 @@
     "title": "Wedding RSVP",
     "welcome": "Welcome, {name}!",
     "loading": "Loading invitation...",
-    "invalidInvitation": "Invalid invitation",
+    "invitationSearch": "Find your invite",
     "missingCode": "No invitation code was provided.",
     "notFound": "Invitation not found",
     "checkLink": "Please check your invitation link.",
