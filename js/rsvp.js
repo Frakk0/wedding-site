@@ -6,10 +6,12 @@ import {
   getLanguage,
 } from './i18n.js'
 import { initBee } from './bee.js'
+import { initSideBanner } from './parallax.js'
 
 await initLanguage()
 
 initBee()
+initSideBanner()
 
 const params = new URLSearchParams(window.location.search)
 let inviteCode = params.get('code')

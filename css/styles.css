@@ -11,8 +11,10 @@
   --color-primary-contrast: #ffffff;
   --color-accent: #c9a66b;
 
-  --font-heading: 'Niconne', cursive;
+  --font-heading: 'Cormorant Garamond', 'Times New Roman', Times, serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  --divider-spacing: 2rem;
 }
 
 html {
@@ -31,6 +33,7 @@ h1,
 h2,
 h3 {
   font-family: var(--font-heading);
+  font-weight: 300;
   color: var(--color-heading);
 }
 
@@ -89,7 +92,7 @@ section + section::before {
   content: '';
   display: block;
   width: min(400px, 60%);
-  margin: 0 auto 2rem;
+  margin: 0 auto var(--divider-spacing);
   border-top: 1px solid var(--color-accent);
 }
 
@@ -211,6 +214,10 @@ button:hover {
   container-type: inline-size;
 }
 
+.calendar-wrap {
+  margin-top: 4rem;
+}
+
 .hero-wrap .photo {
   margin: 0;
 }
@@ -223,7 +230,7 @@ button:hover {
   content: '';
   display: block;
   width: min(400px, 60%);
-  margin: 2rem auto;
+  margin: var(--divider-spacing) auto 4rem;
   border-top: 1px solid var(--color-accent);
 }
 
@@ -236,7 +243,7 @@ button:hover {
 
 .hero-caption {
   position: absolute;
-  top: 14.2857%;
+  top: calc(14.2857% + 8.5cqw);
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -251,6 +258,14 @@ button:hover {
 .hero-caption p {
   margin: 0;
   font-size: 8.5cqw;
+}
+
+.rsvp-main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: left;
 }
 
 .save-the-date {
@@ -268,18 +283,19 @@ button:hover {
 
 .photo-split {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
-  max-width: 1080px;
+  max-width: 520px;
   margin: 1.5rem auto;
 }
 
 .photo-split .photo {
-  flex: 1 1 260px;
+  width: 100%;
   max-width: 500px;
+  height: 320px;
   margin: 0;
+  object-fit: cover;
 }
 
 .route-map {
@@ -363,8 +379,7 @@ button:hover {
 }
 
 .story-photos .photo:first-child {
-  object-fit: contain;
-  background: var(--color-surface);
+  object-fit: fill;
 }
 
 .faq-list {
