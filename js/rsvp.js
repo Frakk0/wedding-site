@@ -5,8 +5,11 @@ import {
   t,
   getLanguage,
 } from './i18n.js'
+import { initBee } from './bee.js'
 
 await initLanguage()
+
+initBee()
 
 const params = new URLSearchParams(window.location.search)
 let inviteCode = params.get('code')
