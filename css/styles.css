@@ -409,10 +409,6 @@ header .save-the-date span:first-child::after {
   object-fit: cover;
 }
 
-.story-photos .photo:first-child {
-  object-fit: fill;
-}
-
 .faq-list {
   max-width: 560px;
   margin: 1.5rem auto;
@@ -440,8 +436,9 @@ header .save-the-date span:first-child::after {
 
 .countdown {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 2.5rem;
+  gap: clamp(0.75rem, 4vw, 2.5rem);
   margin: 1.5rem 0;
 }
 
@@ -453,7 +450,7 @@ header .save-the-date span:first-child::after {
 
 .countdown-value {
   font-family: var(--font-heading);
-  font-size: 4rem;
+  font-size: clamp(2rem, 8vw, 4rem);
   font-weight: 400;
   color: var(--color-heading);
 }
@@ -541,4 +538,23 @@ header .save-the-date span:first-child::after {
   z-index: -1;
   pointer-events: none;
   will-change: transform;
+}
+
+@media (max-width: 600px) {
+  .story-layout {
+    flex-direction: column;
+  }
+
+  .story-text,
+  .story-photos {
+    flex-basis: auto;
+    max-width: 100%;
+  }
+
+  .story-photos .photo {
+    flex: none;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
 }

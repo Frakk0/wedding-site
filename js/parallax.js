@@ -18,7 +18,17 @@ export function initSideBanner() {
   let ticking = false
 
   function updateParallax() {
-    banner.style.transform = `translateY(${window.scrollY * (-1 / 3)}px)`
+    const maxScroll = Math.max(
+      document.documentElement.scrollHeight - window.innerHeight,
+      1
+    )
+    const progress = Math.min(window.scrollY / maxScroll, 1)
+    const travelDistance = Math.max(
+      banner.offsetHeight - window.innerHeight,
+      0
+    )
+
+    banner.style.transform = `translateY(${-progress * travelDistance}px)`
     ticking = false
   }
 
@@ -32,6 +42,9 @@ export function initSideBanner() {
     },
     { passive: true }
   )
+
+  window.addEventListener('resize', updateParallax)
+  banner.addEventListener('load', updateParallax)
 
   updateParallax()
 }
