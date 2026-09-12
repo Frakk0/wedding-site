@@ -32,10 +32,13 @@ export function initBee() {
     }
   }
 
-  function flyToRandomPoint() {
+  function flyToRandomPoint(fast = false) {
     const next = randomPoint()
     const distance = Math.hypot(next.x - current.x, next.y - current.y)
-    const duration = Math.min(Math.max(distance / 80, 1.5), 4)
+
+    const duration = fast
+      ? Math.min(Math.max(distance / 80, 1.5), 4)
+      : Math.min(Math.max(distance / 25, 5), 10)
 
     wrap.style.transitionDuration = `${duration}s`
     bee.style.setProperty('--bee-dir', next.x >= current.x ? 1 : -1)
@@ -45,7 +48,7 @@ export function initBee() {
     current = next
 
     flightTimeout = setTimeout(
-      flyToRandomPoint,
+      () => flyToRandomPoint(false),
       duration * 1000 + 800 + Math.random() * 1200
     )
   }
@@ -62,7 +65,7 @@ export function initBee() {
   bee.addEventListener('click', () => {
     showBuzz()
     clearTimeout(flightTimeout)
-    flyToRandomPoint()
+    flyToRandomPoint(true)
   })
 
   setTimeout(() => {
