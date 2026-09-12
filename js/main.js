@@ -5,6 +5,7 @@ console.log('URL:', import.meta.env.VITE_SUPABASE_URL)
 
 import { initLanguage, setLanguage } from './i18n.js'
 import { initBee } from './bee.js'
+import { initSideBanner } from './parallax.js'
 
 import scheduleHtml from '../schedule.html?raw'
 import faqHtml from '../faq.html?raw'
@@ -17,6 +18,7 @@ document.querySelector('#gifts').innerHTML = giftsHtml
 await initLanguage()
 
 initBee()
+initSideBanner()
 
 document
   .querySelector('#language-selector')
