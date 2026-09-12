@@ -7,10 +7,12 @@ import { initLanguage, setLanguage } from './i18n.js'
 import { initBee } from './bee.js'
 import { initSideBanner } from './parallax.js'
 
+import storyHtml from '../story.html?raw'
 import scheduleHtml from '../schedule.html?raw'
 import faqHtml from '../faq.html?raw'
 import giftsHtml from '../gifts.html?raw'
 
+document.querySelector('#story').innerHTML = storyHtml
 document.querySelector('#schedule').innerHTML = scheduleHtml
 document.querySelector('#faq').innerHTML = faqHtml
 document.querySelector('#gifts').innerHTML = giftsHtml

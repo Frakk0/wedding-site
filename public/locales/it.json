@@ -6,7 +6,8 @@
     "rsvp": "Riservazione",
     "faq": "Domande Frequenti",
     "gifts": "Regali",
-    "saveTheDateLabel": "Segna la data",
+    "story": "La Nostra Storia",
+    "saveTheDateLabel": "Salva la data",
     "saveTheDateValue": "16.07.27"
   },
   "rsvp": {
@@ -50,8 +51,14 @@
     "seconds": "Secondi"
   },
   "gifts": {
-    "donateHint": "Prova a cliccare il pulsante 5 volte per vedere i nostri dati bancari!",
-    "donateButton": "Fai un regalo",
+    "donateHint": "",
+    "donateButton": "Grazie del tuo pensiero",
     "bankInfoIntro": "Grazie per aver pensato a noi! Ecco i nostri dati bancari:"
+  },
+  "story": {
+    "paragraph1": "La storia di Lisa e Francesco è iniziata sei anni fa, quasi per caso. Un giorno, Francesco entrò nel caffè dove Lisa lavorava part-time mentre studiava, accompagnato da un amico. Nessuno dei due sapeva che un momento così ordinario sarebbe diventato l'inizio di qualcosa di così speciale.",
+    "paragraph2": "Nel corso degli anni sono cresciuti fianco a fianco: si sono laureati, hanno trovato il lavoro dei loro sogni e hanno costruito una vita fatta di esperienze condivise, risate, amore e fiducia reciproca. Lungo il percorso, la loro piccola famiglia è cresciuta anche grazie all'arrivo della loro splendida gatta, Akira, che è diventata rapidamente una parte molto speciale della loro vita insieme.",
+    "paragraph3": "In ogni nuovo capitolo, hanno continuato a scegliersi e sostenersi a vicenda, creando una relazione che è allo stesso tempo una casa e un'avventura.",
+    "paragraph4": "Sei anni dopo, con Akira al loro fianco, sono pronti per il capitolo più bello di tutti: diventare marito e moglie."
   }
 }

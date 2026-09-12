@@ -6,7 +6,7 @@
   <title data-i18n="common.title">Lisa & Franci</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Niconne&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Niconne&family=Plus+Jakarta+Sans:wght@400;500;600&family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
@@ -14,6 +14,7 @@
   <header>
     <nav>
       <a href="#home" data-i18n="common.home"></a>
+      <a href="#story" data-i18n="common.story"></a>
       <a href="#schedule" data-i18n="common.schedule"></a>
       <a href="#faq" data-i18n="common.faq"></a>
       <a href="#gifts" data-i18n="common.gifts"></a>
@@ -29,7 +30,18 @@
 
   <main>
     <section id="home">
-      <h1 data-i18n="common.title"></h1>
+      <img class="title-image" src="images/Lisa&amp;Franci.png" alt="Lisa & Franci">
+
+      <div class="hero-wrap">
+        <img class="photo" src="images/HeroPic.jpeg" alt="Lisa & Franci">
+      </div>
+
+      <div class="hero-wrap">
+        <img class="photo" src="images/Calendar.png" alt="Save the date calendar">
+        <div class="hero-caption">
+          <p data-i18n="common.saveTheDateLabel"></p>
+        </div>
+      </div>
 
       <div id="countdown" class="countdown">
         <div class="countdown-unit">
@@ -49,15 +61,9 @@
           <span class="countdown-label" data-i18n="countdown.seconds"></span>
         </div>
       </div>
-
-      <div class="hero-wrap">
-        <img class="photo" src="images/HeroPic.jpeg" alt="Lisa & Franci">
-        <div class="hero-caption">
-          <p data-i18n="common.saveTheDateLabel"></p>
-          <p data-i18n="common.saveTheDateValue"></p>
-        </div>
-      </div>
     </section>
+
+    <section id="story"></section>
 
     <section id="schedule"></section>
 

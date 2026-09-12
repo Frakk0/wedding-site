@@ -6,6 +6,7 @@
     "rsvp": "RSVP",
     "faq": "FAQ",
     "gifts": "Gifts",
+    "story": "Our Story",
     "saveTheDateLabel": "Save the date",
     "saveTheDateValue": "16.07.27"
   },
@@ -64,8 +65,15 @@
     "seconds": "Seconds"
   },
   "gifts": {
-    "donateHint": " ",
-    "donateButton": "Send a gift",
+    "donateHint": "",
+    "donateButton": "Thank you for your thought",
     "bankInfoIntro": "Thank you for thinking of us! Here are our bank details:"
+  },
+  "story": {
+    "paragraph1": "Lisa and Francesco’s story began six years ago, almost by chance. One day, Francesco walked into the café where Lisa was working part-time while studying, accompanied by a friend. Neither of them knew that such an ordinary moment would become the beginning of something so special.",
+    "paragraph2": "Over the years, they have grown side by side: graduating, finding their dream careers, and building a life filled with shared experiences, laughter, love, and mutual trust. Along the way, their little family grew too, when they became the proud parents of their beautiful cat, Akira, who quickly became a very special part of their life together.",
+    "paragraph3": "Through every new chapter, they have continued to choose and support one another, creating a relationship that feels both like home and an adventure.",
+    "paragraph4":"Six years later, with Akira by their side, they are ready for their most beautiful chapter yet: becoming husband and wife."
+
   }
 }
