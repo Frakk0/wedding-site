@@ -26,7 +26,7 @@ body {
   background: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-body);
-  font-size: 1.05rem;
+  font-size: 0.945rem;
 }
 
 h1,
@@ -134,6 +134,7 @@ button:hover {
   padding: 0;
   max-width: 560px;
   position: relative;
+  container-type: inline-size;
 }
 
 .timeline::before {
@@ -159,13 +160,13 @@ button:hover {
 }
 
 .timeline li:nth-child(odd) {
-  padding-right: 2rem;
+  padding-right: clamp(0.5rem, 4cqw, 2rem);
   text-align: right;
 }
 
 .timeline li:nth-child(even) {
   margin-left: 50%;
-  padding-left: 2rem;
+  padding-left: clamp(0.5rem, 4cqw, 2rem);
   text-align: left;
 }
 
@@ -189,43 +190,24 @@ button:hover {
   left: -7px;
 }
 
-@media (max-width: 500px) {
-  .timeline::before {
-    left: 6px;
-  }
-
-  .timeline li,
-  .timeline li:nth-child(even) {
-    width: auto;
-    margin-left: 0;
-    padding: 0 0 1.75rem 2.25rem;
-    text-align: left;
-  }
-
-  .timeline li:nth-child(odd)::before,
-  .timeline li:nth-child(even)::before {
-    left: 0;
-    right: auto;
-  }
-}
-
 .timeline-time {
   display: block;
   font-weight: 600;
+  font-size: clamp(0.7rem, 4cqw, 1rem);
   color: var(--color-accent);
 }
 
 .timeline-title {
   display: block;
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: clamp(0.85rem, 6cqw, 1.26rem);
   color: var(--color-heading);
 }
 
 .timeline-location {
   display: block;
   color: var(--color-muted);
-  font-size: 0.9rem;
+  font-size: clamp(0.65rem, 3.6cqw, 0.9rem);
 }
 
 .photo {

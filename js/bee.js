@@ -64,6 +64,11 @@ export function initBee() {
 
   bee.addEventListener('click', () => {
     showBuzz()
+
+    if (navigator.vibrate) {
+      navigator.vibrate([40, 40, 40])
+    }
+
     clearTimeout(flightTimeout)
     flyToRandomPoint(true)
   })
