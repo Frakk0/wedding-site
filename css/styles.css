@@ -578,6 +578,10 @@ header .save-the-date span:first-child::after {
   pointer-events: auto;
   cursor: pointer;
   animation: bee-flutter 0.5s ease-in-out infinite alternate;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none;
+  outline: none;
 }
 
 @keyframes bee-flutter {
