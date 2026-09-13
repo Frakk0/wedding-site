@@ -7,7 +7,7 @@
   --color-text: #ece7de;
   --color-muted: #a89f8f;
   --color-heading: #c9a66b;
-  --color-primary: #a9746e;
+  --color-primary: #495c2c;
   --color-primary-contrast: #ffffff;
   --color-accent: #c9a66b;
 
@@ -131,6 +131,7 @@ button:hover {
 .timeline {
   list-style: none;
   margin: 2rem auto;
+
   padding: 0;
   max-width: 480px;
   position: relative;
@@ -139,7 +140,7 @@ button:hover {
 .timeline::before {
   content: '';
   position: absolute;
-  left: 6px;
+  left: 2.5rem;
   top: 0.5rem;
   bottom: 0.5rem;
   width: 2px;
@@ -148,7 +149,7 @@ button:hover {
 
 .timeline li {
   position: relative;
-  padding: 0 0 1.75rem 2.25rem;
+  padding: 0 0 1.75rem 4.25rem;
 }
 
 .timeline li:last-child {
@@ -158,7 +159,7 @@ button:hover {
 .timeline li::before {
   content: '';
   position: absolute;
-  left: 0;
+  left: 2rem;
   top: 0.4rem;
   width: 14px;
   height: 14px;
@@ -199,10 +200,10 @@ button:hover {
 
 .title-image {
   display: block;
-  width: 100%;
+  width: 75%;
   max-width: 640px;
   height: auto;
-  margin: 4rem auto 0;
+  margin: 3rem auto 0;
   border: none;
   outline: none;
 }
@@ -210,12 +211,12 @@ button:hover {
 .hero-wrap {
   position: relative;
   max-width: 520px;
-  margin: 1.5rem auto;
+  margin: 0.0rem auto;
   container-type: inline-size;
 }
 
 .calendar-wrap {
-  margin-top: 4rem;
+  margin-top: 0rem;
 }
 
 .hero-wrap .photo {
@@ -224,13 +225,14 @@ button:hover {
 
 .hero-heart {
   max-width: 780px;
+  margin-top: 0.0rem;
 }
 
-.hero-wrap + .hero-wrap::before {
+.hero-heart::after {
   content: '';
   display: block;
   width: min(400px, 60%);
-  margin: var(--divider-spacing) auto 4rem;
+  margin: 4rem auto 4rem;
   border-top: 1px solid var(--color-accent);
 }
 
@@ -243,11 +245,11 @@ button:hover {
 
 .hero-caption {
   position: absolute;
-  top: calc(14.2857% + 8.5cqw);
+  top: 7.5%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  padding: 0 1rem;
+  padding: 0 4cqw;
   box-sizing: border-box;
   text-align: center;
   color: #4a4a4a;
@@ -501,9 +503,9 @@ header .save-the-date span:first-child::after {
   box-sizing: border-box;
   padding: 1rem;
   text-align: center;
-  border: 1px solid var(--color-accent);
+  border: 1px solid var(--color-heading);
   border-radius: 8px;
-  background: var(--color-surface);
+  background: var(--color-muted);
 }
 
 .bee-wrap {
