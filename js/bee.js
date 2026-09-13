@@ -6,7 +6,7 @@ export function initBee() {
   wrap.style.visibility = 'hidden'
 
   const bee = document.createElement('img')
-  bee.src = `${import.meta.env.BASE_URL}images/Bee.png`
+  bee.src = `${import.meta.env.BASE_URL}images/Bee_small.png`
   bee.alt = ''
   bee.className = 'bee'
   bee.setAttribute('aria-hidden', 'true')
