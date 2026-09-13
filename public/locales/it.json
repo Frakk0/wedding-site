@@ -32,9 +32,10 @@
     "dinner": "Cena",
     "party": "PartyRock",
     "routeTitle": "Percorso dall'hotel alla chiesa",
-    "RouteCar": "In auto: il tragitto dall'hotel alla chiesa richiede circa 10 minuti ed è indicato sulla mappa. Segnaliamo inoltre che i parcheggi consigliati sono indicati sulla mappa.",
-    "RouteWalk": "A piedi: il tragitto dall'hotel alla chiesa richiede circa 30 minuti. Si può passare per la stazione centrale degli autobus 'pensilina', proseguire verso la funicolare e percorrere un breve tratto in salita per raggiungere la Cattedrale.",
-    "RoutePublicTransport": "Con i mezzi pubblici: il modo migliore per raggiungere la chiesa è prendere l'autobus fino alla stazione ferroviaria di Lugano (circa 20 minuti); una volta lì, si scendono le splendide scale con vista sul lago per circa metà percorso (300 metri) e la chiesa si troverà subito sulla destra."
+    "RouteOptions": "Opzioni di percorso",
+    "RouteCar": "Il tragitto dall'hotel alla chiesa richiede circa 10 minuti ed è indicato sulla mappa, che mostra anche i parcheggi consigliati.",
+    "RouteWalk": "ATTENZIONE: prima di intraprendere questa impresa, tenete conto della temperatura. Il tragitto a piedi dall'hotel alla chiesa richiede circa 30 minuti. Si può passare per la stazione centrale degli autobus 'pensilina', proseguire verso la funicolare della stazione e percorrere un breve tratto in salita per raggiungere la Cattedrale.",
+    "RoutePublicTransport": "Il modo migliore per raggiungere la chiesa è prendere l'autobus fino alla stazione ferroviaria di Lugano (dall'hotel si possono prendere le linee 2 o 3 alla fermata vicino al Ristorante 'Breva'; il tragitto richiede circa 20 minuti). Una volta alla stazione, si scendono le splendide scale con vista sul lago per circa metà percorso (300 metri) e la chiesa si troverà subito sulla destra."
   },
   "faq": {
     "title": "Domande Frequenti",

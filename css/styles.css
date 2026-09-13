@@ -363,6 +363,10 @@ header .save-the-date span:first-child::after {
   border-radius: 8px;
 }
 
+.route-options-title {
+  font-size: 2rem;
+}
+
 .route-options {
   max-width: 560px;
   margin: 1.5rem auto;
@@ -385,8 +389,9 @@ header .save-the-date span:first-child::after {
 }
 
 .route-option-icon {
-  font-size: 1.75rem;
-  line-height: 1;
+  display: block;
+  width: 44px;
+  height: 44px;
 }
 
 .route-option p {
