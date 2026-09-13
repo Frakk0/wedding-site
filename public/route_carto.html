@@ -145,16 +145,15 @@
 
     map_62054d39c5f998189f898f742a529fe1.fitBounds(
         [[45.9998221, 8.9465817], [46.0106344, 8.9683503]],
-        { "padding": [20, 20] }
+        { "padding": [0, 0] }
     );
 
-
+    //Parking Hotel
     var marker_b4185d845d5e78b61e64da5dee5fcf7e = L.marker(
         [46.006100, 8.967967],
         {
         }
     ).addTo(map_62054d39c5f998189f898f742a529fe1);
-
 
     var icon_fba02e3e589a198af0cfd0a113efe85b = L.AwesomeMarkers.icon(
         {
@@ -166,22 +165,33 @@
         }
     );
 
-
     var popup_4b92410c4d0dce00b8ff3d964f9dd4b8 = L.popup({
         "maxWidth": 300,
     });
 
     popup_4b92410c4d0dce00b8ff3d964f9dd4b8.setContent("Hotel Parking");
 
-
-
-    marker_b4185d845d5e78b61e64da5dee5fcf7e.bindPopup(popup_4b92410c4d0dce00b8ff3d964f9dd4b8)
-        ;
-
-
-
+    marker_b4185d845d5e78b61e64da5dee5fcf7e.bindPopup(popup_4b92410c4d0dce00b8ff3d964f9dd4b8);
 
     marker_b4185d845d5e78b61e64da5dee5fcf7e.setIcon(icon_fba02e3e589a198af0cfd0a113efe85b);
+
+        //Parking Church
+    var marker_parking_church = L.marker(
+        [46.003386, 8.949443],
+        {
+        }
+    ).addTo(map_62054d39c5f998189f898f742a529fe1);
+
+
+    var popup_church_parking = L.popup({
+        "maxWidth": 300,
+    });
+
+    popup_church_parking.setContent("Church Parking - Autosilo Motta");
+
+    marker_parking_church.bindPopup(popup_church_parking);
+
+    marker_parking_church.setIcon(icon_fba02e3e589a198af0cfd0a113efe85b);
 
 
     var poly_line_6d312101fe935de2330455230400311d = L.polyline(
@@ -265,7 +275,7 @@
 
 
 
-    popup_076c7026291c16f647e4f0bd2363a28b.setContent("Cattedrale San Lorenzo - Via Borgetto 1");
+    popup_076c7026291c16f647e4f0bd2363a28b.setContent("Cattedrale San Lorenzo - Via Borghetto 1");
 
 
 
@@ -278,13 +288,13 @@
     marker_9e5830d8dd90b5d19d79752827035e09.setIcon(icon_38ddec2a408eddf6b5778fa410e7ea2b);
 
 
-    var route_legend = L.control({ position: "bottomleft" });
+    var route_legend = L.control({ position: "bottomright" });
     route_legend.onAdd = function (map) {
         var div = L.DomUtil.create("div", "route-legend");
         div.innerHTML =
             '<div><span class="dot dot-start"></span>Hotel Lido Seegarten</div>' +
             '<div><span class="dot dot-end"></span>Cattedrale San Lorenzo</div>' +
-            '<div><span class="dot dot-parking"></span>Hotel Parking</div>';
+            '<div><span class="dot dot-parking"></span>Suggested Parkings</div>';
         return div;
     };
     route_legend.addTo(map_62054d39c5f998189f898f742a529fe1);
