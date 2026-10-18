@@ -2,14 +2,27 @@
    Theme: edit these variables to restyle the whole site
    --------------------------------------------------- */
 :root {
-  --color-background: #2a3328;
-  --color-surface: #f3eae1;
-  --color-text: #ece7de;
-  --color-muted: #a89f8f;
-  --color-heading: #c9a66b;
-  --color-primary: #495c2c;
-  --color-primary-contrast: #ffffff;
-  --color-accent: #c9a66b;
+  /* Palette: Light Blue Harmony */
+  --sky-whisper: #d6e6f2;
+  --powder-blue: #b7cce3;
+  --dusty-horizon: #87a8c6;
+  --ocean-breeze: #5d7896;
+  --arctic-mist: #e9f1f7;
+  --pearl-ivory: #f6f3ec;
+  --warm-ivory:#f3efe6;
+  --silver-sage: #b9c6be;
+  --deep-ocean: #3e5470; /* darker Ocean Breeze for readable body text */
+  --ivory:#f2ede0;
+
+  --color-background: var(--ivory);
+  --color-surface: var(--pearl-ivory);
+  --color-card: rgba(246, 243, 236, 0.6);
+  --color-text: var(--deep-ocean);
+  --color-muted: var(--ocean-breeze);
+  --color-heading: var(--ocean-breeze);
+  --color-primary: var(--ocean-breeze);
+  --color-primary-contrast: var(--pearl-ivory);
+  --color-accent: var(--dusty-horizon);
 
   --font-heading: 'Cormorant Garamond', 'Times New Roman', Times, serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
@@ -74,7 +87,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 
 nav a.active {
@@ -110,7 +123,7 @@ textarea {
   border: 1px solid var(--color-accent);
   border-radius: 4px;
   padding: 0.5rem;
-  background: var(--color-background);
+  background: var(--color-surface);
   color: var(--color-text);
 }
 
@@ -274,7 +287,7 @@ button:hover {
   padding: 0 4cqw;
   box-sizing: border-box;
   text-align: center;
-  color: #4a4a4a;
+  color: var(--color-text);
   font-family: 'Cormorant Garamond', 'Times New Roman', Times, serif;
   font-weight: 300;
 }
@@ -299,7 +312,7 @@ button:hover {
 .rsvp-content {
   padding: 2rem;
   margin-top: 0.5rem;
-  background: rgba(42, 51, 40, 0.55);
+  background: var(--color-card);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 8px;
@@ -382,7 +395,7 @@ header .save-the-date span:first-child::after {
   gap: 0.5rem;
   padding: 1rem;
   border-radius: 8px;
-  background: rgba(42, 51, 40, 0.55);
+  background: var(--color-card);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   text-align: center;
@@ -430,7 +443,7 @@ header .save-the-date span:first-child::after {
   max-width: calc(50% - 1rem);
   padding: 1.25rem;
   border-radius: 8px;
-  background: rgba(42, 51, 40, 0.55);
+  background: var(--color-card);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-sizing: border-box;
@@ -477,7 +490,7 @@ header .save-the-date span:first-child::after {
   margin-bottom: 0.75rem;
   padding: 0.75rem 1rem;
   border-radius: 8px;
-  background: rgba(42, 51, 40, 0.55);
+  background: var(--color-card);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -560,9 +573,9 @@ header .save-the-date span:first-child::after {
   box-sizing: border-box;
   padding: 1rem;
   text-align: center;
-  border: 1px solid var(--color-heading);
+  border: 1px solid var(--color-accent);
   border-radius: 8px;
-  background: var(--color-muted);
+  background: var(--color-surface);
 }
 
 .bee-wrap {
