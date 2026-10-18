@@ -25,6 +25,7 @@
   },
   "schedule": {
     "title": "Программа и место",
+    "gathering": "GATHERING",
     "ceremony": "Церемония",
     "reception": "Фуршет",
     "photos": "Молодожёны уходят на фотосессию",

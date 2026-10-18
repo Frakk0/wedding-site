@@ -1,5 +1,6 @@
 let translations = {}
-let currentLanguage = 'en'
+const defaultLanguage = 'it'
+let currentLanguage = defaultLanguage
 
 const supportedLanguages = ['en', 'it', 'ru']
 
@@ -27,7 +28,7 @@ export function t(key, variables = {}) {
 
 export async function setLanguage(language) {
   if (!supportedLanguages.includes(language)) {
-    language = 'en'
+    language = defaultLanguage
   }
 
   const localesUrl = `${import.meta.env.BASE_URL}locales/${language}.json`
@@ -53,6 +54,12 @@ export async function setLanguage(language) {
   localStorage.setItem('language', language)
   document.documentElement.lang = language
 
+  // Keep the selector in sync with what is actually displayed
+  const languageSelector = document.querySelector('#language-selector')
+  if (languageSelector) {
+    languageSelector.value = language
+  }
+
   translatePage()
 }
 
@@ -65,15 +72,7 @@ export function translatePage() {
 export async function initLanguage() {
   const savedLanguage = localStorage.getItem('language')
 
-  const browserLanguage =
-    navigator.language?.slice(0, 2)
-
-  const initialLanguage =
-    supportedLanguages.includes(savedLanguage)
-      ? savedLanguage
-      : supportedLanguages.includes(browserLanguage)
-        ? browserLanguage
-        : 'en'
-
-  await setLanguage(initialLanguage)
+  await setLanguage(
+    supportedLanguages.includes(savedLanguage) ? savedLanguage : defaultLanguage
+  )
 }

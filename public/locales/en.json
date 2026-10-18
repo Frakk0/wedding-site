@@ -38,8 +38,9 @@
   },
   "schedule": {
     "title": "Schedule & Location",
+    "gathering": "Gathering",
     "ceremony": "Ceremony",
-    "reception": "Reception",
+    "reception": "Small Reception",
     "photos": "Photo Session",
     "aperitif": "Aperitif",
     "dinner": "Dinner",

@@ -25,9 +25,10 @@
   },
   "schedule": {
     "title": "Programma e Luogo",
+    "gathering": "Ritrovo",
     "ceremony": "Cerimonia",
-    "reception": "Rinfresco",
-    "photos": "Gli sposi scappano a far foto",
+    "reception": "Piccolo rinfresco",
+    "photos": "Momento foto",
     "aperitif": "Aperitivo, Intrattenimento",
     "dinner": "Cena",
     "party": "PartyRock",
