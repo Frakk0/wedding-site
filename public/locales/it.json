@@ -12,6 +12,9 @@
   },
   "rsvp": {
     "title": "Riservazione",
+    "loading": "Loading invitation...",
+    "invitationSearch": "Find your invite",
+    "missingCode": "No invitation code was provided.",
     "enterCode": "Inserisci il tuo codice di invito",
     "submitCode": "Visualizza invito",
     "backToSite": "Torna al sito",

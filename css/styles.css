@@ -6,12 +6,14 @@
   --sky-whisper: #d6e6f2;
   --powder-blue: #b7cce3;
   --dusty-horizon: #87a8c6;
-  --ocean-breeze: #5d7896;
+  --ocean-breeze: #364b74;
+  --ocean-breeze-old: #5d7896;
   --arctic-mist: #e9f1f7;
   --pearl-ivory: #f6f3ec;
   --warm-ivory:#f3efe6;
   --silver-sage: #b9c6be;
   --deep-ocean: #3e5470; /* darker Ocean Breeze for readable body text */
+  --deeper-ocean: #29374a;
   --ivory:#f2ede0;
 
   --color-background: var(--ivory);
